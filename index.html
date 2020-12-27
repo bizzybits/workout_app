@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <!--Add Row Form-->
+    <!--Name, reps, weight, unit, date, submit button-->
+    <!-- dont' put forms withiin your table row elemesnt-->
+    <!-- either have one form that wraps table or no foram at all and have inputs in the table-->
+    <!-- querty selector all for all of inputs in the row-->
+    <h1>Add Form</h1>
+    <form id="addForm">
+        <input type="text" name="name">
+        <input type="number" name="reps">
+        <input type="number" name="weight">
+        <!--better to have this as a radio button--add value to button-->
+        <input type="text" name="unit">
+        <input type="date" name="date">
+        <input type="submit" value="submit">
+        </iunput>
+    </form>
+    <!--Table of data actually created in JS-->
+    <!--Rows with id column (created in db) name, reps, weight, unit, date, (functions) update button, deglete button -->
+    <h1>Workouts Table</h1>
+    <table id="myTable">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>reps</th>
+            <th>weight</th>
+            <th>units</th>
+            <th>date</th>
+            <th>submit button</th>
+            <th>delete button</th>
+        </tr>
+        <tr>
+            <form>
+                <td>1</td>
+                <td><input type="text" name="name" value="situps"  /> </td>
+                <td><input type="number" name="reps" value="23" /> </td>
+                <td><input type="text" name="weight" value="40" /> </td>
+                <td><input type="text" name="unit" value="lbs" /> </td>
+                <!--date comes back all wonky from db
+                //make sure that when you get time back from mysql that you 
+                //convert it to <xxxx-xx-xx>//if you use date select elemesnt--using js
+                //befor eyou put value attribute you need to make sure its' in the right format -->   
+                <td><input type="date" name="date" value="2020-05-10"  /> </td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </form>
+        </tr>
+        <tr>
+            <form>
+                <td>2</td>
+                <td><input type="text" name="name" value="situps"  /> </td>
+                <td><input type="number" name="reps" value="23" /> </td>
+                <td><input type="text" name="weight" value="40" /> </td>
+                <td><input type="text" name="unit" value="lbs" /> </td>
+                <td><input type="date" name="date" value="2020-05-10"  /> </td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </form>
+        </tr>
+        <tr>
+            <form>
+                <td>3</td>
+                <td><input type="text" name="name" value="situps"  /> </td>
+                <td><input type="number" name="reps" value="23" /> </td>
+                <td><input type="text" name="weight" value="40" /> </td>
+                <td><input type="text" name="unit" value="lbs" /> </td>
+                <td><input type="date" name="date" value="2020-05-10"  /> </td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </form>
+        </tr>
+        <tr>
+            <form>
+                <td></td>
+                <td><input type="text" name="name" value="situps"  /> </td>
+                <td><input type="number" name="reps" value="23" /> </td>
+                <td><input type="text" name="weight" value="40" /> </td>
+                <td><input type="text" name="unit" value="lbs" /> </td>
+                <td><input type="date" name="date" value="2020-05-10"  /> </td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </form>
+        </tr>
+    </table>
+
+    <!-- use event delegation -- use target of event at table or id column https://javascript.info/event-delegation to find values it wants to send-->
+    <br />
+    <button id="reset-table">Reset Table</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
